@@ -1,4 +1,16 @@
-<script setup> </script>
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const username = ref('')
+const password = ref('')
+const router = useRouter()
+
+function handleLogin() {
+  router.push('/ini_docentes')
+}
+</script>
+
 <template>
 <div class="login-container">
   <div class="login-form">
@@ -19,7 +31,7 @@
       <button type="submit" class="login-button">Ingresar</button>
     </form>
 
-    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+    <a href="/olvid_contrasena" class="forgot-password">¿Olvidaste tu contraseña?</a>
   </div>
 </div>
 </template>
