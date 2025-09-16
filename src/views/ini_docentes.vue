@@ -57,9 +57,6 @@ export default {
         { id: 'gestion', text: 'Gestion de Horas', href: '#gestion', icon: '🕒' },
         { id: 'registradas', text: 'Horas registradas', href: '/student_progress', icon: '📋' },
         { id: 'mapa', text: 'Mapa', href: '#mapa', icon: '🗺️' },
-        { id: 'calendario', text: 'Calendario', href: '#calendario', icon: '📅' },
-        { id: 'verificacion', text: 'Verificación', href: '#verificacion', icon: '✅' },
-        { id: 'informativo', text: 'Módulo informativo', href: '/pregun_frecu', icon: 'ℹ️' }
       ]
     };
   },

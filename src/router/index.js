@@ -8,6 +8,7 @@ import pregun_frecu from '../views/pregun_frecu.vue'
 import solicitud_apro from '../views/solicitud_apro.vue'
 import ini_estudiante from '../views/ini_estudiante.vue'
 import ini_docentes from '../views/ini_docentes.vue'
+import actividades_ver from '../views/actividades_ver'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -47,15 +48,20 @@ const router = createRouter({
       name: "solicitud_apro",
       component: solicitud_apro
     },
-     {
+    {
       path: "/ini_estudiante",
       name: "ini_estudiante",
       component: ini_estudiante
     },
-     {
+    {
       path: "/ini_docentes",
       name: "ini_docentes",
       component: ini_docentes
+    },
+    {
+      path: "/actividades_ver",
+      name: "actividades_ver",
+      component: actividades_ver
     }
   ]
 })

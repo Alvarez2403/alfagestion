@@ -3,11 +3,7 @@
 export default {
   data() {
     return {
-      sections: ['10', '11'],
-      selectedSection: '10',
-      groups: ['A', 'B', 'C', 'D', 'E'],
-      selectedGroup: 'A',
-      activeMenu: 'Solicitudes',
+      userName: 'Alejandro Bediya Mintoya', // Cambia este valor por el nombre que quieras mostrar
       estudiantes: [
         { nombre: "Alejandro", actividad: "-", horas: 55, estado: "Pendiente" },
         { nombre: "Beatriz", actividad: "-", horas: 50, estado: "Aprobado" },
@@ -45,15 +41,7 @@ export default {
       <aside class="sidebar">
         <div class="section-select">
           <div style="display: flex; gap: 10px;">
-            <select v-model="selectedSection">
-              <option v-for="section in sections" :key="section" :value="section">{{ section }}</option>
-            </select>
-            <select v-model="selectedGroup">
-              <option v-for="group in groups" :key="group" :value="group">{{ group }}</option>
-            </select>
-          </div>
-          <div class="section-label">
-            Section {{ selectedSection }} - Grupo {{ selectedGroup }}
+
           </div>
         </div>
         <ul class="menu">
@@ -63,21 +51,23 @@ export default {
           <li :class="{ active: activeMenu === 'Solicitudes' }" @click="activeMenu = 'Solicitudes'">
             <a href="/solicitud_apro" style="color: inherit; text-decoration: none;">📄 Solicitudes</a>
           </li>
+          <li :class="{ active: activeMenu === 'Evidencia' }" @click="activeMenu = 'Evidencia'">
+            <a href="/actividades_ver" style="color: inherit; text-decoration: none;">🖼️ Evidencia</a>
+          </li>
         </ul>
         <button class="btn-subir">Subir</button>
       </aside>
       <main class="main-content">
-        <div class="section-header">
-          <span class="section-title">Section {{ selectedSection }} - Grupo {{ selectedGroup }}</span>
-        </div>
+        <!-- Título con el nombre del estudiante -->
+        <h1 class="user-title">{{ userName }}</h1>
         <div class="tabla-estudiantes">
           <table>
             <thead>
               <tr>
-                <th class="th-espaciado">Estudiante</th>
+                <th class="th-espaciado">Actividad</th>
                 <th class="th-espaciado">Horas</th>
-                <th class="th-espaciado">H. verificadas</th>
-                <th class="th-espaciado">Ultima carga</th>
+                <th class="th-espaciado">Evidencia</th>
+                <th class="th-espaciado">Estado</th>
                 <th class="th-espaciado">.</th>
                 <th></th>
               </tr>
@@ -86,9 +76,9 @@ export default {
               <tr v-for="(est, i) in estudiantes" :key="i">
                 <td class="estudiante">{{ est.nombre }}</td>
                 <td>{{ est.actividad }}</td>
-                <td>{{ est.horas }}</td>
-                <th class="th-espaciado">05/07/2025</th>
                 <td><a class="btn-evidencia" href="/actividades_ver">Ver Evidencia</a></td>
+                <th class="th-espaciado">05/07/2025</th>
+                <td></td>
               </tr>
             </tbody>
           </table>
@@ -130,6 +120,12 @@ td { font-size: 1em; padding: 0.5em 0.7em; }
 .btn-aprobar { background: #ff3c3c; color: #fff; border: none; border-radius: 12px; padding: 0.3em 1.2em; font-weight: 600; cursor: pointer; font-size: 1em; display: flex; align-items: center; gap: 0.5em; transition: background 0.2s; }
 .btn-aprobar.aprobado { background: #222; }
 .arrow { font-size: 0.9em; }
+.user-title {
+  color: #d90000;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 @media (max-width: 900px) {
   .main-content { padding: 1rem 0.5rem; }
   .tabla-estudiantes { padding: 1rem; }
