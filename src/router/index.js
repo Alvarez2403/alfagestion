@@ -9,6 +9,15 @@ import solicitud_apro from '../views/solicitud_apro.vue'
 import ini_estudiante from '../views/ini_estudiante.vue'
 import ini_docentes from '../views/ini_docentes.vue'
 import actividades_ver from '../views/actividades_ver'
+import actividades_registro from '../views/actividades_registro.vue'
+import encargado_registro from '../views/encargado_registro.vue'
+import organizacion_registro from '../views/organizacion_registro.vue'
+import ini_rol from '../views/ini_rol.vue'
+import institucion_registro from '@/views/institucion_registro.vue'
+import agregar_institucion from '@/views/agregar_institucion.vue'
+import encargadoi_registro from '@/views/encargadoi_registro.vue'
+import agregar_encargado from '@/views/agregar_encargado.vue'
+import actividad_registro from '@/views/actividad_registro.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -62,6 +71,51 @@ const router = createRouter({
       path: "/actividades_ver",
       name: "actividades_ver",
       component: actividades_ver
+    },
+    {
+      path: "/actividades_registro",
+      name: "actividades_registro",
+      component: actividades_registro
+    },
+    {
+      path: "/encargado_registro",
+      name: "encargado_registro",
+      component: encargado_registro
+    },
+    {
+      path: "/organizacion_registro",
+      name: "organizacion_registro",
+      component: organizacion_registro
+    },
+    {
+      path: "/",
+      name: "ini_rol",
+      component: ini_rol
+    },
+    {
+      path: "/institucion_registro",
+      name: "institucion_registro",
+      component: institucion_registro
+    },
+    {
+      path: "/agregar_institucion",
+      name: "agregar_institucion",
+      component: agregar_institucion
+    },
+    {
+      path: "/encargadoi_registro",
+      name: "encargadoi_registro",
+      component: encargadoi_registro
+    },
+    {
+      path: "/agregar_encargado",
+      name: "agregar_encargado",
+      component: agregar_encargado
+    },
+    {
+      path: "/actividad_registro",
+      name: "actividad_registro",
+      component: actividad_registro
     }
   ]
 })

@@ -55,7 +55,6 @@ export default {
             <a href="/actividades_ver" style="color: inherit; text-decoration: none;">🖼️ Evidencia</a>
           </li>
         </ul>
-        <button class="btn-subir">Subir</button>
       </aside>
       <main class="main-content">
         <!-- Título con el nombre del estudiante -->
@@ -76,7 +75,7 @@ export default {
               <tr v-for="(est, i) in estudiantes" :key="i">
                 <td class="estudiante">{{ est.nombre }}</td>
                 <td>{{ est.actividad }}</td>
-                <td><a class="btn-evidencia" href="/actividades_ver">Ver Evidencia</a></td>
+                <td><a class="btn-evidencia" href="/actividades_registro">Ver Evidencia</a></td>
                 <th class="th-espaciado">05/07/2025</th>
                 <td></td>
               </tr>

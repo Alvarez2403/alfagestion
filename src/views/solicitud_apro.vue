@@ -35,7 +35,7 @@ export default {
     <header class="header">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTMmJbMKvDEyFeEF-G5P9V-kci3mquWZwqEg&s" class="logo" />
       <nav>
-        <a href="#">Inicio</a>
+        <a href="/ini_docentes">Inicio</a>
         <a href="#">Mi perfil</a>
       </nav>
       <input class="search" placeholder="Buscar" />
@@ -58,7 +58,7 @@ export default {
         </div>
         <ul class="menu">
           <li :class="{ active: activeMenu === 'Inicio' }" @click="activeMenu = 'Inicio'">
-            <a href="#inicio" style="color: inherit; text-decoration: none;">🏠 Inicio</a>
+            <a href="/ini_docentes" style="color: inherit; text-decoration: none;">🏠 Inicio</a>
           </li>
           <li :class="{ active: activeMenu === 'Solicitudes' }" @click="activeMenu = 'Solicitudes'">
             <a href="/solicitud_apro" style="color: inherit; text-decoration: none;">📄 Solicitudes</a>
@@ -88,7 +88,7 @@ export default {
                 <td>{{ est.actividad }}</td>
                 <td>{{ est.horas }}</td>
                 <th class="th-espaciado">05/07/2025</th>
-                <td><a class="btn-evidencia" href="/actividades_ver">Ver Evidencia</a></td>
+                <td><a class="btn-evidencia" href="/actividades_ver">Ver Actividades</a></td>
               </tr>
             </tbody>
           </table>
