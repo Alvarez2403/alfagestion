@@ -56,9 +56,9 @@ export default {
       activeItem: 'gestion',
       menuItems: [
         { id: 'gestion', text: 'Gestion de Horas', href: '/student_progress', icon: '🕒' },
-        { id: 'registradas', text: 'Agregar Institucion', href: '/institucion_registro', icon: '📋' },
-        { id: 'mapa', text: 'Agregar Encargado', href: '/encargadoi_registro', icon: '🗺️' },
-        { id: 'calendario', text: 'Agregar Actividades', href: '/actividad_registro', icon: '📅' },
+        { id: 'registradas', text: 'Agregar Institucion', href: '/institucion_vista', icon: '📋' },
+        { id: 'mapa', text: 'Agregar Encargado', href: '/encargado_vista', icon: '🗺️' },
+        { id: 'calendario', text: 'Agregar Actividades', href: '/actividad_vista', icon: '📅' },
         { id: 'informativo', text: 'Módulo informativo', href: '/pregun_frecu', icon: 'ℹ️' }
       ]
     };

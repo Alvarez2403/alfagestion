@@ -18,6 +18,11 @@ import agregar_institucion from '@/views/agregar_institucion.vue'
 import encargadoi_registro from '@/views/encargadoi_registro.vue'
 import agregar_encargado from '@/views/agregar_encargado.vue'
 import actividad_registro from '@/views/actividad_registro.vue'
+import agregar_actividad from '@/views/agregar_actividad.vue'
+import actividad_vista from '@/views/actividad_vista.vue'
+import encargado_vista from '@/views/encargado_vista.vue'
+import institucion_vista from '@/views/institucion_vista.vue'
+
 
 const router = createRouter({
   history: createWebHistory(),
@@ -116,6 +121,26 @@ const router = createRouter({
       path: "/actividad_registro",
       name: "actividad_registro",
       component: actividad_registro
+    },
+    {
+      path: "/agregar_actividad",
+      name: "agregar_actividad",
+      component: agregar_actividad
+    },
+    {
+      path: "/actividad_vista",
+      name: "actividad_vista",
+      component: actividad_vista
+    },
+    {
+      path: "/encargado_vista",
+      name: "encargado_vista",
+      component: encargado_vista
+    },
+    {
+      path: "/institucion_vista",
+      name: "institucion_vista",
+      component: institucion_vista
     }
   ]
 })
